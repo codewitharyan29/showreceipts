@@ -49,7 +49,7 @@ Keep it concise — 150-250 words max.`
       'Authorization': `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: 'llama3-8b-8192',
+      model: 'llama-3.3-70b-versatile',
       max_tokens: 400,
       messages: [{ role: 'user', content: prompt }],
     }),
