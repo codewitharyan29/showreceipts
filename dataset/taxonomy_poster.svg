@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 660" width="800" height="660">
+  <rect width="800" height="660" fill="#07080a"/>
+  
+  <text x="400" y="44" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#00E87A">Δ DELTA</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555">7-Species Slop Taxonomy · rule-based detection · zero LLM</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <rect x="30" y="90" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#FF4136" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="90" width="5" height="68" rx="2" fill="#FF4136"/>
+  <text x="60" y="116" font-family="monospace" font-size="22" fill="#FF4136">◈</text>
+  <text x="92" y="112" font-family="monospace" font-size="14" font-weight="bold" fill="#FF4136">THE XEROX</text>
+  <text x="92" y="132" font-family="Arial,sans-serif" font-size="11" fill="#888">Restates diff — high alignment, low DRIS</text>
+  <text x="92" y="150" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Explain WHY not WHAT</text>
+  <rect x="30" y="168" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#FF851B" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="168" width="5" height="68" rx="2" fill="#FF851B"/>
+  <text x="60" y="194" font-family="monospace" font-size="22" fill="#FF851B">◎</text>
+  <text x="92" y="190" font-family="monospace" font-size="14" font-weight="bold" fill="#FF851B">THE GHOST</text>
+  <text x="92" y="210" font-family="Arial,sans-serif" font-size="11" fill="#888">Answers nothing a reviewer needs — zero ECS</text>
+  <text x="92" y="228" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Write for the reviewer, not yourself</text>
+  <rect x="30" y="246" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#FFDC00" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="246" width="5" height="68" rx="2" fill="#FFDC00"/>
+  <text x="60" y="272" font-family="monospace" font-size="22" fill="#FFDC00">◇</text>
+  <text x="92" y="268" font-family="monospace" font-size="14" font-weight="bold" fill="#FFDC00">SEMANTIC MIRAGE</text>
+  <text x="92" y="288" font-family="Arial,sans-serif" font-size="11" fill="#888">Jargon-dense, zero causal transfer</text>
+  <text x="92" y="306" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Strip jargon. If nothing remains, explain nothing</text>
+  <rect x="30" y="324" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#B10DC9" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="324" width="5" height="68" rx="2" fill="#B10DC9"/>
+  <text x="60" y="350" font-family="monospace" font-size="22" fill="#B10DC9">⊙</text>
+  <text x="92" y="346" font-family="monospace" font-size="14" font-weight="bold" fill="#B10DC9">THE LOOP</text>
+  <text x="92" y="366" font-family="Arial,sans-serif" font-size="11" fill="#888">Circular paragraphs — each restates the last</text>
+  <text x="92" y="384" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Each sentence must add one new concept</text>
+  <rect x="30" y="402" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#01FF70" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="402" width="5" height="68" rx="2" fill="#01FF70"/>
+  <text x="60" y="428" font-family="monospace" font-size="22" fill="#01FF70">◐</text>
+  <text x="92" y="424" font-family="monospace" font-size="14" font-weight="bold" fill="#01FF70">THE VOID</text>
+  <text x="92" y="444" font-family="Arial,sans-serif" font-size="11" fill="#888">Describes WHAT — never explains WHY</text>
+  <text x="92" y="462" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Add root cause: what broke, why this fixes it</text>
+  <rect x="30" y="480" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#7FDBFF" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="480" width="5" height="68" rx="2" fill="#7FDBFF"/>
+  <text x="60" y="506" font-family="monospace" font-size="22" fill="#7FDBFF">◉</text>
+  <text x="92" y="502" font-family="monospace" font-size="14" font-weight="bold" fill="#7FDBFF">THE COPY</text>
+  <text x="92" y="522" font-family="Arial,sans-serif" font-size="11" fill="#888">Interchangeable with any similar PR</text>
+  <text x="92" y="540" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Find one thing unique to THIS change</text>
+  <rect x="30" y="558" width="740" height="68" rx="8" fill="#0c0c0c" stroke="#88D498" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="30" y="558" width="5" height="68" rx="2" fill="#88D498"/>
+  <text x="60" y="584" font-family="monospace" font-size="22" fill="#88D498">◫</text>
+  <text x="92" y="580" font-family="monospace" font-size="14" font-weight="bold" fill="#88D498">TIME BOMB</text>
+  <text x="92" y="600" font-family="Arial,sans-serif" font-size="11" fill="#888">Accurate today, useless in 30 days</text>
+  <text x="92" y="618" font-family="Arial,sans-serif" font-size="11" fill="#44BB88">Fix: Add decision context. Code changes; reasoning must survive</text>
+  <text x="400" y="648" text-anchor="middle" font-family="monospace" font-size="10" fill="#333">showreceipts.vercel.app · Not "is this AI?" — Did a human think? · DELTA v2.0</text>
+</svg>

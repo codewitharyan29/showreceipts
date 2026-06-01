@@ -1,0 +1,45 @@
+{
+  "total": 121,
+  "quality_n": 65,
+  "slop_n": 56,
+  "ecosystem_distribution": {
+    "react": 17,
+    "nextjs": 14,
+    "vscode": 11,
+    "rust": 12,
+    "linux": 3,
+    "python": 30,
+    "devops": 16,
+    "go": 18
+  },
+  "quality_by_ecosystem": {
+    "react": 8,
+    "nextjs": 8,
+    "vscode": 8,
+    "rust": 7,
+    "linux": 2,
+    "python": 14,
+    "devops": 11,
+    "go": 7
+  },
+  "slop_by_ecosystem": {
+    "react": 9,
+    "nextjs": 6,
+    "vscode": 3,
+    "rust": 5,
+    "linux": 1,
+    "devops": 5,
+    "python": 16,
+    "go": 11
+  },
+  "quality_length_stats": {
+    "mean_words": 145,
+    "min_words": 113,
+    "max_words": 175
+  },
+  "slop_length_stats": {
+    "mean_words": 31,
+    "min_words": 25,
+    "max_words": 41
+  }
+}

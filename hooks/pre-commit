@@ -1,0 +1,57 @@
+#!/bin/sh
+#
+# DELTA pre-commit hook
+# Checks if a PR description (COMMIT_EDITMSG) meets quality threshold.
+# Install: cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+#
+# Or install via: npx showreceipts install-hook
+#
+DELTA_API="${DELTA_API_URL:-https://showreceipts-backend.railway.app}"
+THRESHOLD="${DELTA_THRESHOLD:-20}"
+
+# Only run if commit message file exists and has content
+MSG_FILE="$1"
+if [ -z "$MSG_FILE" ] || [ ! -f "$MSG_FILE" ]; then
+    exit 0
+fi
+
+MSG=$(cat "$MSG_FILE")
+WORDS=$(echo "$MSG" | wc -w | tr -d ' ')
+
+# Skip if commit message is too short to evaluate (merge commits, etc.)
+if [ "$WORDS" -lt 5 ]; then
+    exit 0
+fi
+
+# Check if API is reachable
+if ! curl -sf "$DELTA_API/health" > /dev/null 2>&1; then
+    echo "DELTA: API not reachable at $DELTA_API — skipping check"
+    exit 0
+fi
+
+echo "DELTA: analyzing commit message..."
+RESPONSE=$(curl -sf -X POST "$DELTA_API/analyze" \
+    -H "Content-Type: application/json" \
+    -d "{\"description\": $(echo "$MSG" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}" \
+    2>/dev/null)
+
+if [ $? -ne 0 ] || [ -z "$RESPONSE" ]; then
+    echo "DELTA: analysis failed — skipping"
+    exit 0
+fi
+
+SCORE=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('delta_score', 0))" 2>/dev/null)
+LABEL=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('slop_label', ''))" 2>/dev/null)
+
+echo "DELTA score: $SCORE/100 — $LABEL"
+
+if python3 -c "import sys; sys.exit(0 if float('${SCORE:-0}') >= float('$THRESHOLD') else 1)" 2>/dev/null; then
+    echo "DELTA: ✅ Score meets threshold ($THRESHOLD)"
+    exit 0
+else
+    echo ""
+    echo "DELTA: ⚠ Score $SCORE is below warning threshold $THRESHOLD"
+    echo "Consider explaining: WHY was this change needed? What tradeoffs were made?"
+    echo "(Commit blocked. Set DELTA_THRESHOLD=0 to disable, or improve the commit message.)"
+    exit 1
+fi

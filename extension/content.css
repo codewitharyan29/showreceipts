@@ -1,0 +1,8 @@
+#delta-badge {
+  transition: all 0.2s ease;
+}
+#delta-badge:hover {
+  background: #0c0c0c !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,232,122,0.2);
+}

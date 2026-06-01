@@ -41,6 +41,9 @@ function Nav() {
           <a href="/leaderboard" className="text-sm text-[var(--muted)] hover:text-[var(--text)] transition-colors hidden sm:block">
             Leaderboard
           </a>
+          <a href="/integrations" className="text-sm text-[var(--muted)] hover:text-[var(--text)] transition-colors hidden sm:block">
+            Integrations
+          </a>
           <a
             href="https://github.com/codewitharyan29/showreceipts"
             target="_blank"
@@ -290,9 +293,9 @@ function LabelExplainer() {
 /* ── benchmark ───────────────────────────────────────────────────── */
 function Benchmark() {
   const stats = [
-    { n: 72,  label: 'F1 Score',  suffix: '%', color: '#00E87A', note: 'on 200-PR labeled dataset' },
-    { n: 200, label: 'PRs tested', suffix: '',  color: '#A78BFA', note: '100 quality · 100 slop' },
-    { n: 8,   label: 'Tracks covered', suffix: '',  color: '#38BDF8', note: 'A + B via unified engine' },
+    { n: 96,  label: 'F1 Score',  suffix: '%', color: '#00E87A', note: '5-fold CV · 121 labeled PRs' },
+    { n: 121, label: 'PRs tested', suffix: '',  color: '#A78BFA', note: '8 ecosystems · 65 quality · 56 slop' },
+    { n: 2,   label: 'Tracks covered', suffix: '',  color: '#38BDF8', note: 'A + B via unified engine' },
     { n: 0,   label: 'LLM calls', suffix: '',   color: '#FF9020', note: 'in the detection path' },
   ]
 
@@ -542,6 +545,7 @@ function Footer() {
         <div className="flex items-center gap-6 text-xs font-mono text-[var(--muted)]">
           <Link href="/analyze" className="hover:text-[var(--text)] transition-colors">Analyzer</Link>
           <Link href="/leaderboard" className="hover:text-[var(--text)] transition-colors">Leaderboard</Link>
+          <Link href="/integrations" className="hover:text-[var(--text)] transition-colors">Integrations</Link>
           <a href="#how" className="hover:text-[var(--text)] transition-colors">How it works</a>
           <a href="#benchmark" className="hover:text-[var(--text)] transition-colors">Benchmark</a>
           <a href="https://github.com/codewitharyan29/showreceipts" className="hover:text-[var(--text)] transition-colors">GitHub ↗</a>

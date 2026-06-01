@@ -1,0 +1,12 @@
+{
+  "attacks_tested": 48,
+  "attacks_blocked": 48,
+  "vulnerabilities": 0,
+  "vulnerability_details": [],
+  "positive_controls_passed": 2,
+  "attack_score_stats": {
+    "mean": 37.0,
+    "max": 53.7,
+    "min": 27.7
+  }
+}

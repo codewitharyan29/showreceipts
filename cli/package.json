@@ -1,0 +1,15 @@
+{
+  "name": "showreceipts",
+  "version": "2.0.0",
+  "description": "DELTA CLI — measure epistemic contribution in PR descriptions",
+  "main": "index.js",
+  "bin": {
+    "showreceipts": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["pr", "code-review", "quality", "slop", "delta"],
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}

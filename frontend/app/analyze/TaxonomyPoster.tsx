@@ -1,0 +1,11 @@
+// Taxonomy poster component - standalone page + shareable SVG
+export const SPECIES = [
+  { glyph:"◈", name:"The Xerox",       color:"#FF4136", desc:"Restates diff. High alignment, low DRIS.",            fix:"Explain WHY not WHAT. Replace diff restatements with reasoning invisible in the code.",                example:'"Updated the auth middleware. Fixed auth.ts. Modified session handler."' },
+  { glyph:"◎", name:"The Ghost",       color:"#FF851B", desc:"Answers nothing a reviewer needs. Zero ECS.",          fix:"Write for the reviewer, not yourself. Answer: what would I need to know to review this?",             example:'"This PR makes improvements to the system. Please review and approve."' },
+  { glyph:"◇", name:"Semantic Mirage", color:"#FFDC00", desc:"Jargon-dense, zero causal transfer.",                   fix:"Strip jargon. If nothing remains, you haven't explained anything.",                                    example:'"Refactored architecture for improved modularity and scalability optimization."' },
+  { glyph:"⊙", name:"The Loop",        color:"#B10DC9", desc:"Circular paragraphs. Every sentence restates the last.", fix:"Each sentence must introduce one concept the previous paragraph didn't contain.",                      example:'"Auth handles authentication. Authentication is managed by the auth layer."' },
+  { glyph:"◐", name:"The Void",        color:"#01FF70", desc:"Describes WHAT changed. Never explains WHY.",           fix:"Add root cause: what was wrong before, and why does this fix it?",                                    example:'"Changed the database query. Updated the pagination logic. Modified the service."' },
+  { glyph:"◉", name:"The Copy",        color:"#7FDBFF", desc:"Interchangeable with any other PR of the same type.",   fix:"Find ONE thing about THIS specific change that no other PR of this type would say.",                   example:'"Fixed the bug. Updated tests. Various code improvements. Please merge."' },
+  { glyph:"◫", name:"Time Bomb",       color:"#01FF70", desc:"Accurate today. Useless in 30 days. No rationale.",     fix:"Add the decision context. Code changes; the reasoning behind it must survive.",                        example:'"Added error handling for edge cases. Improved stability and reliability."' },
+]
+export default SPECIES

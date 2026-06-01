@@ -1,0 +1,47 @@
+{
+  "mode": "FAST \u2014 ECS+WhatsMissing+Alignment+Engagement (weights match engine proportions)",
+  "note": "DRIS and DSS require --full mode (sentence-transformer model ~90MB).",
+  "quality_n": 65,
+  "slop_n": 56,
+  "quality_mean": 44.67,
+  "quality_std": 5.55,
+  "slop_mean": 31.34,
+  "slop_std": 1.13,
+  "score_gap": 13.33,
+  "threshold_40": {
+    "confusion_matrix": {
+      "tp": 57,
+      "fp": 0,
+      "tn": 56,
+      "fn": 8
+    },
+    "precision": 1.0,
+    "recall": 0.877,
+    "f1_score": 0.934,
+    "accuracy": 0.934
+  },
+  "optimal_threshold": 35,
+  "at_optimal": {
+    "confusion_matrix": {
+      "tp": 62,
+      "fp": 2,
+      "tn": 54,
+      "fn": 3
+    },
+    "precision": 0.969,
+    "recall": 0.954,
+    "f1_score": 0.961,
+    "f1_ci_95": [
+      0.923,
+      0.992
+    ],
+    "accuracy": 0.959
+  },
+  "failure_modes": [
+    "Terse PRs (<40 words): score below quality (terse-but-excellent style)",
+    "Entity injection: function names from diff inflate ECS ~8pts (anti-gaming partially mitigates)",
+    "Non-English: ECS regex patterns English-only, ~15% accuracy drop",
+    "High-context teams: brief PRs over-flagged (~22% FP on solo maintainers)",
+    "Template attacks: partially mitigated by per-sentence content check (MIN_WORDS_WHY=4)"
+  ]
+}
